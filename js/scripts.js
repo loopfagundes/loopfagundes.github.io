@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', event => {
+
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
         new bootstrap.ScrollSpy(document.body, {
