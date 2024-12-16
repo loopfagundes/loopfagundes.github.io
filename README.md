@@ -1,1 +1,1 @@
-### ![](assets/img/favicon.png) [Portfólio - Luciano](https://loopfagundes.github.io/)
+### [Portfólio - Luciano](https://loopfagundes.github.io/)	
