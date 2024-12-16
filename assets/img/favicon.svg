@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+   <style>
+      /* Define as cores para temas claros e escuros */
+      .background { fill: white; }
+      .text { fill: black; }
+
+      @media (prefers-color-scheme: dark) {
+      .background { fill: black; }
+      .text { fill: white; }
+      }
+   </style>
+   <rect class="background" width="48" height="48" rx="8" />
+   <text class="text" x="10" y="30" font-family="monospace" font-size="24" font-weight="bold">&gt;_</text>
+</svg>
