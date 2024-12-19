@@ -474,6 +474,9 @@ mark,
 }
 
 .list-inline-item {
+  font-size: 16px;
+  margin-top: 15px;
+  text-align: center;
   display: inline-block;
 }
 
