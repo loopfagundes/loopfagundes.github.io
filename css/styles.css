@@ -162,12 +162,14 @@ sup {
   top: -0.5em;
 }
 
+/* cor email */
 a {
   color: #6c757d;
   text-decoration: none;
   background-color: transparent;
 }
 
+/* o mouse passa no cor email */
 a:hover {
   color: #949494;
   text-decoration: underline;
@@ -382,7 +384,7 @@ h6,
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
-  color: #343a40;
+  color: #343a40; /*nome principal*/
 }
 
 h1,
@@ -6967,6 +6969,7 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 
+/* cor sidebar */
 .bg-primary {
   background-color: #949494 !important;
 }
@@ -10701,6 +10704,7 @@ button.bg-dark:focus {
   color: #fff !important;
 }
 
+/* cor sobrenome */
 .text-primary {
   color: #949494 !important;
 }
@@ -10917,6 +10921,7 @@ a.text-dark:focus {
   }
 }
 
+/* as letras  */
 body {
   padding-top: 3.375rem;
   color: #6c757d;
@@ -11016,7 +11021,7 @@ p.lead {
   justify-content: center;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: #495057;
+  background-color: #495057; /* cor icone rede social */
   color: #fff;
   border-radius: 15px;
   font-size: 1.5rem;
@@ -11027,8 +11032,9 @@ p.lead {
   margin-right: 0;
 }
 
+/* mouse passa no icone rede social */
 .social-icons .social-icon:hover {
-  background-color: #949494;
+  background-color: #ff0000;
 }
 
 .dev-icons {
