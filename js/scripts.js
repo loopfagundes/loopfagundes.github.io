@@ -21,3 +21,6 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+const text = "Clique para baixar o currículo";
+document.getElementById("btn-cv").innerHTML = text;
