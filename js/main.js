@@ -1,14 +1,21 @@
+/* ══════════════════════════════════════════════
+   PORTFOLIO — Luciano Fagundes
+   main.js
+   ══════════════════════════════════════════════ */
 
-// ── ACTIVE NAV ON SCROLL ────────────────────────
-const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('nav a');
+'use strict';
 
+const sidebar    = document.getElementById('sidebar');
+const menuToggle = document.getElementById('menu-toggle');
+const overlay    = document.getElementById('overlay');
+const sections   = document.querySelectorAll('section[id]');
+const navLinks   = document.querySelectorAll('nav a');
+
+// ── ACTIVE NAV ON SCROLL ──────────────────────
 const activeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-
     navLinks.forEach(a => a.classList.remove('active'));
-
     const match = document.querySelector(`nav a[href="#${entry.target.id}"]`);
     if (match) match.classList.add('active');
   });
@@ -16,40 +23,42 @@ const activeObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => activeObserver.observe(s));
 
-// ── FADE-IN ON SCROLL ────────────────────────────
+// ── FADE-IN ON SCROLL ─────────────────────────
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target); // animate once
+      fadeObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
 sections.forEach(s => fadeObserver.observe(s));
 
-// ── MOBILE SIDEBAR ───────────────────────────────
-const sidebar   = document.getElementById('sidebar');
-const menuToggle = document.getElementById('menu-toggle');
-
-function toggleMenu() {
-  sidebar.classList.toggle('open');
+// ── MOBILE SIDEBAR ────────────────────────────
+function openMenu() {
+  sidebar.classList.add('open');
+  overlay.classList.add('visible');
+  document.body.style.overflow = 'hidden'; // impede scroll do body
 }
 
-// Close sidebar when a nav link is clicked on mobile
-navLinks.forEach(a => {
-  a.addEventListener('click', () => {
-    sidebar.classList.remove('open');
-  });
-});
+function closeMenu() {
+  sidebar.classList.remove('open');
+  overlay.classList.remove('visible');
+  document.body.style.overflow = '';
+}
 
-// Close sidebar when clicking outside (mobile)
-document.addEventListener('click', (e) => {
-  if (
-    sidebar.classList.contains('open') &&
-    !sidebar.contains(e.target) &&
-    !menuToggle.contains(e.target)
-  ) {
-    sidebar.classList.remove('open');
-  }
+function toggleMenu() {
+  sidebar.classList.contains('open') ? closeMenu() : openMenu();
+}
+
+// Fecha ao clicar num link do nav
+navLinks.forEach(a => a.addEventListener('click', closeMenu));
+
+// Fecha ao clicar no overlay
+if (overlay) overlay.addEventListener('click', closeMenu);
+
+// Fecha ao pressionar ESC
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMenu();
 });
