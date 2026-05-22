@@ -1,8 +1,3 @@
-/* ══════════════════════════════════════════════
-   PORTFOLIO — Luciano Fagundes
-   main.js
-   ══════════════════════════════════════════════ */
-
 'use strict';
 
 const sidebar    = document.getElementById('sidebar');
@@ -11,7 +6,7 @@ const overlay    = document.getElementById('overlay');
 const sections   = document.querySelectorAll('section[id]');
 const navLinks   = document.querySelectorAll('nav a');
 
-// ── ACTIVE NAV ON SCROLL ──────────────────────
+// ACTIVE NAV ON SCROLL
 const activeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -23,7 +18,7 @@ const activeObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => activeObserver.observe(s));
 
-// ── FADE-IN ON SCROLL ─────────────────────────
+// FADE-IN ON SCROLL
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -35,7 +30,7 @@ const fadeObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => fadeObserver.observe(s));
 
-// ── MOBILE SIDEBAR ────────────────────────────
+// MOBILE SIDEBAR
 function openMenu() {
   sidebar.classList.add('open');
   overlay.classList.add('visible');

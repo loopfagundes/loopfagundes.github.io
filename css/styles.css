@@ -1,9 +1,4 @@
-/* ══════════════════════════════════════════════
-   PORTFOLIO — Luciano Fagundes
-   styles.css
-   ══════════════════════════════════════════════ */
-
-/* ── TOKENS ─────────────────────────────────── */
+/* TOKENS */
 :root {
   --bg:        #080810;
   --bg2:       #0e0e1c;
@@ -17,7 +12,7 @@
   --sidebar-w: 260px;
 }
 
-/* ── RESET ───────────────────────────────────── */
+/* RESET */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -29,11 +24,15 @@ body {
   line-height: 1.6;
   min-width: 0;
   overflow-x: hidden;
+
+  /* Suavização de fontes — evita serrilhado */
+  -webkit-font-smoothing: antialiased;      /* Chrome / Safari / Edge */
+  -moz-osx-font-smoothing: grayscale;       /* Firefox macOS */
+  text-rendering: optimizeLegibility;       /* kerning e ligaduras */
+  font-synthesis: none;                     /* evita fontes falsas/bold sintético */
 }
 
-/* ══════════════════════════════════════════════
-   SIDEBAR — desktop: fixa à esquerda
-   ══════════════════════════════════════════════ */
+/* SIDEBAR — desktop: fixa à esquerda */
 #sidebar {
   position: fixed;
   top: 0; left: 0;
@@ -100,6 +99,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
   display: block;
   image-rendering: -webkit-optimize-contrast;
@@ -118,7 +118,7 @@ body {
   font-size: 11px;
   color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 2.5px;
   margin-top: 2px;
   font-family: 'Space Mono', monospace;
 }
@@ -149,6 +149,21 @@ body {
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50%       { opacity: .4; }
+}
+
+.section-label,
+.hero-tag,
+.hero-tags .tag,
+.skill-group-title,
+.tl-date,
+.tl-role,
+.stack-tag,
+.course-meta,
+.scroll-hint,
+.sidebar-name p,
+nav a {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* Nav */
@@ -235,9 +250,7 @@ nav a.active i { opacity: 1; }
 
 .email-link:hover { color: var(--accent2); }
 
-/* ══════════════════════════════════════════════
-   MAIN
-   ══════════════════════════════════════════════ */
+/* MAIN */
 main {
   margin-left: var(--sidebar-w);
   min-height: 100vh;
@@ -291,7 +304,7 @@ h2.section-title {
   line-height: 1.2;
 }
 
-/* ── ABOUT ────────────────────────────────────── */
+/* ABOUT */
 #about {
   min-height: 100vh;
   display: flex;
@@ -393,7 +406,7 @@ h2.section-title {
   50%       { transform: translateY(4px); }
 }
 
-/* ── EXPERIENCE ───────────────────────────────── */
+/* EXPERIENCE */
 .timeline { display: flex; flex-direction: column; }
 
 .timeline-item {
@@ -477,7 +490,7 @@ h2.section-title {
   top: 3px;
 }
 
-/* ── PROJECTS ─────────────────────────────────── */
+/* PROJECTS */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -553,7 +566,7 @@ h2.section-title {
   font-family: 'Space Mono', monospace;
 }
 
-/* ── SKILLS ───────────────────────────────────── */
+/* SKILLS */
 .skills-grid { display: flex; flex-direction: column; gap: 2rem; }
 
 .skill-group-title {
@@ -593,7 +606,7 @@ h2.section-title {
   flex-shrink: 0;
 }
 
-/* ── COURSES ──────────────────────────────────── */
+/* COURSES */
 .courses-list { display: flex; flex-direction: column; gap: 10px; }
 
 .course-item {
@@ -652,7 +665,7 @@ h2.section-title {
   color: var(--accent2);
 }
 
-/* ── INTERESTS ────────────────────────────────── */
+/* INTERESTS */
 .interests-text {
   font-size: 15px;
   color: var(--muted);
@@ -660,7 +673,7 @@ h2.section-title {
   max-width: 600px;
 }
 
-/* ── DOWNLOAD ─────────────────────────────────── */
+/* DOWNLOAD */
 .download-card {
   background: var(--bg2);
   border: 1px solid var(--border);
@@ -727,9 +740,7 @@ h2.section-title {
   box-shadow: 0 8px 24px rgba(99,102,241,.35);
 }
 
-/* ══════════════════════════════════════════════
-   MOBILE TOGGLE BUTTON
-   ══════════════════════════════════════════════ */
+/* MOBILE TOGGLE BUTTON */
 #menu-toggle {
   display: none;
   position: fixed;
@@ -747,9 +758,7 @@ h2.section-title {
   justify-content: center;
 }
 
-/* ══════════════════════════════════════════════
-   OVERLAY — fecha sidebar ao clicar fora (mobile)
-   ══════════════════════════════════════════════ */
+/* OVERLAY — fecha sidebar ao clicar fora (mobile) */
 #overlay {
   display: none;
   position: fixed;
@@ -760,11 +769,9 @@ h2.section-title {
 
 #overlay.visible { display: block; }
 
-/* ══════════════════════════════════════════════
-   BREAKPOINTS
-   ══════════════════════════════════════════════ */
+/* BREAKPOINTS */
 
-/* ── Tablet largo / desktop pequeno ─── 992px */
+/* Tablet largo / desktop pequeno ─ 992px */
 @media (max-width: 992px) {
   :root { --sidebar-w: 220px; }
 
@@ -773,7 +780,7 @@ h2.section-title {
   h2.section-title { font-size: 26px; }
 }
 
-/* ── Tablet ─────────────────────────── 768px */
+/* Tablet ── 768px */
 @media (max-width: 768px) {
   /* Sidebar vira drawer deslizante */
   #sidebar {
@@ -813,7 +820,7 @@ h2.section-title {
   .download-card { max-width: 100%; }
 }
 
-/* ── Mobile (Aplica de 0px até 768px) ── */
+/* Mobile (Aplica de 0px até 768px) */
 @media (max-width: 768px) {
   section { padding: 2.5rem 1.25rem; }
 
@@ -830,4 +837,11 @@ h2.section-title {
   .hero-tags { gap: 6px; }
 
   .tag { font-size: 11px; padding: 4px 10px; }
+}
+
+/* Mobile pequeno 360px */
+@media (max-width: 360px) {
+  section { padding: 2rem 1rem; }
+
+  .skill-pill { font-size: 12px; padding: 6px 10px; }
 }
