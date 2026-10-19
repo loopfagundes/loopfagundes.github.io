@@ -2,328 +2,309 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <title>Portfólio — Luciano Fagundes</title>
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
+  <div class="stage" aria-hidden="true">
+    <div class="ribbon r1"></div>
+    <div class="ribbon r2"></div>
+    <div class="ribbon r3"></div>
+    <div class="aur a1"></div>
+    <div class="aur a2"></div>
+    <div class="aur a3"></div>
+    <div class="aur a4"></div>
+  </div>
 
-  <!-- Mobile menu toggle -->
-  <button id="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">
-    <i class="fa fa-bars"></i>
-  </button>
-
-  <!-- SIDEBAR -->
-  <aside id="sidebar">
-    <div class="sidebar-top">
-      <div class="avatar">
-        <img src="assets/img/profile.svg" alt="LF">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="avatar" src="assets/img/profile.svg" alt=""/>
+        <div>
+          <b>LUCIANO</b>
+          <small>FAGUNDES</small>
+        </div>
       </div>
-      <div class="sidebar-name">
-        <h1>Luciano Fagundes</h1>
-        <p>QA Automação</p>
+
+      <nav aria-label="Principal">
+        <span class="label">Menu</span>
+        <button type="button" data-target="sobre" aria-current="page">Sobre</button>
+        <button type="button" data-target="experiencia">Experiência</button>
+        <button type="button" data-target="projetos">Projetos</button>
+        <button type="button" data-target="habilidades">Habilidades</button>
+        <button type="button" data-target="cursos">Cursos</button>
+        <button type="button" data-target="interesses">Interesses</button>
+        <button type="button" data-target="download">Download</button>
+      </nav>
+
+      <div class="foot">
+        <span class="status-pill"><span class="status-dot"></span> DBServer · Híbrido</span>
+        <div class="socials">
+          <a class="social-btn" href="https://www.linkedin.com/in/luciano-fagundes-518b62322/" target="_blank" rel="noopener" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a class="social-btn" href="https://github.com/loopfagundes" target="_blank" rel="noopener" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <a class="email-link" href="mailto:lof.fagundes@gmail.com">lof.fagundes@gmail.com</a>
       </div>
-      <div class="status-pill">
-        <span class="status-dot"></span>
-        DBServer · Híbrido
-      </div>
-    </div>
+    </aside>
 
-    <nav>
-      <a href="#about"     class="active"><i class="fa fa-user"></i>           Sobre</a>
-      <a href="#experience">              <i class="fa fa-briefcase"></i>      Experiência</a>
-      <a href="#projects">                <i class="fa fa-folder-open"></i>    Projetos</a>
-      <a href="#skills">                  <i class="fa fa-code"></i>           Habilidades</a>
-      <a href="#courses">                 <i class="fa fa-graduation-cap"></i> Cursos</a>
-      <a href="#interests">               <i class="fa fa-star"></i>           Interesses</a>
-      <a href="#download">                <i class="fa fa-download"></i>       Download</a>
-    </nav>
+    <main>
+      <section class="panel active" id="sobre">
+        <div class="icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 11v5M12 8h.01"/>
+          </svg>
+        </div>
+        <div class="kicker">Portfólio</div>
+        <h1>Sobre</h1>
+        <span class="badge">QA Automação · Porto Alegre, RS</span>
+        <p>
+          QA de Automação surdo, atuando de forma híbrida na DBServer. Acredito que diversidade e inclusão
+          tornam as equipes mais fortes e que qualidade de software começa com comunicação clara e testes
+          bem estruturados.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">PCD</span>
+          <span class="tag">BDD / Cucumber</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Web · Mobile · API</span>
+        </div>
+      </section>
 
-    <div class="sidebar-footer">
-      <div class="socials">
-        <a class="social-btn" href="https://www.linkedin.com/in/luciano-fagundes-518b62322/" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a class="social-btn" href="https://github.com/loopfagundes" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <a class="email-link" href="mailto:lof.fagundes@gmail.com">lof.fagundes@gmail.com</a>
-    </div>
-  </aside>
+      <section class="panel" id="experiencia">
+        <div class="panel-head">
+          <div class="kicker">Carreira</div>
+          <h1>Experiência</h1>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="tl-date">Mai 2019<br>presente</div>
+            <div class="tl-body">
+              <div class="tl-company">DBServer</div>
+              <div class="tl-role">Analista de Teste &amp; Automação</div>
+              <ul class="tl-items">
+                <li>Testes abrangentes em diversas etapas do ciclo de desenvolvimento.</li>
+                <li>Scripts de automação para web, mobile (Android/iOS) e APIs REST.</li>
+                <li>Pipelines CI/CD com Jenkins, GitHub Actions e GitLab CI.</li>
+                <li>Documentação de testes atualizada e acessível para toda a equipe.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="tl-date">Mai 2025<br>Fev 2026</div>
+            <div class="tl-body">
+              <div class="tl-company">Youcom &amp; Camicado - Renner</div>
+              <div class="tl-role">QA Automação - alocado no cliente Renner</div>
+              <ul class="tl-items">
+                <li>Testes funcionais em Android, iOS e Web com Appium e Selenium.</li>
+                <li>Automação end-to-end com Java e Cucumber (BDD).</li>
+                <li>Pipelines no Jenkins com relatórios no TestMO.</li>
+                <li>Relatórios de bugs.</li>
+                <li>Revisões de código aplicando práticas de Clean Code.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
 
-  <!-- MAIN -->
-  <main>
+      <section class="panel" id="projetos">
+        <div class="panel-head">
+          <div class="kicker">GitHub</div>
+          <h1>Projetos</h1>
+        </div>
+        <div class="projects-grid">
+          <a class="project-card" href="https://github.com/loopfagundes/serverest-api-js" target="_blank" rel="noopener">
+            <div class="project-icon"><i class="fa fa-plug"></i></div>
+            <div class="project-title">ServeRest API — JavaScript</div>
+            <div class="project-desc">Testes completos para fluxo de compra: auth, usuários, produtos e carrinho com Cypress.</div>
+            <div class="project-stack">
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">Cypress</span>
+              <span class="stack-tag">GitHub Actions</span>
+            </div>
+          </a>
+          <a class="project-card" href="https://github.com/loopfagundes/db_cucumber_web" target="_blank" rel="noopener">
+            <div class="project-icon"><i class="fa fa-flask"></i></div>
+            <div class="project-title">BDD Web — BugBank</div>
+            <div class="project-desc">Automação Selenium + Cucumber com cenários BDD para o BugBank, cobrindo fluxos críticos.</div>
+            <div class="project-stack">
+              <span class="stack-tag">Java</span>
+              <span class="stack-tag">Selenium</span>
+              <span class="stack-tag">Cucumber</span>
+            </div>
+          </a>
+          <a class="project-card" href="https://github.com/loopfagundes/appium-cucumber" target="_blank" rel="noopener">
+            <div class="project-icon"><i class="fa fa-mobile-alt"></i></div>
+            <div class="project-title">Appium + Cucumber</div>
+            <div class="project-desc">Testes mobile no Sauce Demo com Appium e Cucumber integrados - Android.</div>
+            <div class="project-stack">
+              <span class="stack-tag">Java</span>
+              <span class="stack-tag">Appium</span>
+              <span class="stack-tag">Cucumber</span>
+            </div>
+          </a>
+          <a class="project-card" href="https://github.com/loopfagundes/automacao-e2e-swaglabs" target="_blank" rel="noopener">
+            <div class="project-icon"><i class="fa fa-robot"></i></div>
+            <div class="project-title">Automação E2E — Sauce Demo</div>
+            <div class="project-desc">Automação web completa no Sauce Demo com Cypress e Cucumber.</div>
+            <div class="project-stack">
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">Cypress</span>
+              <span class="stack-tag">Cucumber</span>
+            </div>
+          </a>
+          <a class="project-card" href="https://github.com/loopfagundes/db_desafio_api" target="_blank" rel="noopener">
+            <div class="project-icon"><i class="fa fa-map-marker-alt"></i></div>
+            <div class="project-title">API — Via Cep</div>
+            <div class="project-desc">Testes de API RESTful com Rest-Assured para consulta e validação do serviço ViaCEP.</div>
+            <div class="project-stack">
+              <span class="stack-tag">Java</span>
+              <span class="stack-tag">Rest-Assured</span>
+            </div>
+          </a>
+          <a class="project-card" href="https://github.com/loopfagundes" target="_blank" rel="noopener">
+            <div class="project-icon"><i class="fab fa-github"></i></div>
+            <div class="project-title">Ver todos no GitHub</div>
+            <div class="project-desc">Confira todos os repositórios públicos com projetos de automação e estudo.</div>
+            <div class="project-stack">
+              <span class="stack-tag">loopfagundes</span>
+            </div>
+          </a>
+        </div>
+      </section>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="hero-tag">// portfólio</div>
-      <div class="hero-name">Luciano<br><span>Fagundes</span></div>
-      <p class="hero-bio">
-        QA de Automação surdo, atuando de forma híbrida na DBServer. Acredito que diversidade e inclusão
-        tornam as equipes mais fortes e que qualidade de software começa com comunicação clara e testes
-        bem estruturados.
-      </p>
-      <div class="hero-tags">
-        <span class="tag">PCD</span>
-        <span class="tag">BDD / Cucumber</span>
-        <span class="tag">CI/CD</span>
-        <span class="tag">Web · Mobile · API</span>
-        <span class="tag">Porto Alegre, RS</span>
-      </div>
-    
-      <div class="scroll-hint">
-        <i class="fa fa-arrow-down"></i> scroll
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="section-label">Carreira</div>
-      <h2 class="section-title">Experiência</h2>
-
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="tl-date">Mai 2019<br>presente</div>
-          <div class="tl-line"><div class="tl-dot tl-dot--green"></div></div>
-          <div class="tl-body">
-            <div class="tl-company">DBServer</div>
-            <div class="tl-role">Analista de Teste &amp; Automação</div>
-            <ul class="tl-items">
-              <li>Testes abrangentes em diversas etapas do ciclo de desenvolvimento.</li>
-              <li>Scripts de automação para web, mobile (Android/iOS) e APIs REST.</li>
-              <li>Pipelines CI/CD com Jenkins, GitHub Actions e GitLab CI.</li>
-              <li>Documentação de testes atualizada e acessível para toda a equipe.</li>
-            </ul>
+      <section class="panel" id="habilidades">
+        <div class="panel-head">
+          <div class="kicker">Stack</div>
+          <h1>Habilidades</h1>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <div class="skill-group-title">Linguagens</div>
+            <div class="skill-pills">
+              <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="">Java</span>
+              <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Automação Web &amp; Mobile</div>
+            <div class="skill-pills">
+              <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/selenium.svg" alt="">Selenium</span>
+              <span class="skill-pill"><img src="https://cdn.worldvectorlogo.com/logos/appium.svg" alt="">Appium</span>
+              <span class="skill-pill"><img src="https://raw.githubusercontent.com/devicons/devicon/670a611ad1c3e057ee385168d65c8ab27a7e1be5/icons/cypressio/cypressio-original.svg" alt="">Cypress</span>
+              <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/cucumberio/cucumberio-icon.svg" alt="">Cucumber</span>
+              <span class="skill-pill"><img src="https://avatars.githubusercontent.com/u/12528662?s=200&v=4" alt="">TestNG</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Teste de API</div>
+            <div class="skill-pills">
+              <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="">Postman</span>
+              <span class="skill-pill"><img src="https://rest-assured.io/img/logo-transparent.png" alt="">Rest Assured</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">CI/CD &amp; DevOps</div>
+            <div class="skill-pills">
+              <span class="skill-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/960px-Jenkins_logo.svg.png" alt="">Jenkins</span>
+              <span class="skill-pill"><img src="https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg" alt="">GitHub Actions</span>
+              <span class="skill-pill"><img src="https://hub.datree.io/img/cicd/3.png" alt="">GitLab CI</span>
+              <span class="skill-pill"><img src="https://cdn.worldvectorlogo.com/logos/docker-4.svg" alt="">Docker</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title">Build &amp; Gestão</div>
+            <div class="skill-pills">
+              <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/apache_maven/apache_maven-icon.svg" alt="">Maven</span>
+              <span class="skill-pill"><img src="https://www.svgrepo.com/show/353831/gradle.svg" alt="">Gradle</span>
+              <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/trello/trello-icon.svg" alt="">Trello</span>
+              <span class="skill-pill"><img src="https://www.svgrepo.com/show/353935/jira.svg" alt="">Jira</span>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="timeline-item">
-          <div class="tl-date">Mai 2025<br>Fev 2026</div>
-          <div class="tl-line"><div class="tl-dot"></div></div>
-          <div class="tl-body">
-            <div class="tl-company">Youcom &amp; Camicado - Renner </div>
-            <div class="tl-role">QA Automação - alocado no cliente Renner</div>
-            <ul class="tl-items">
-              <li>Testes funcionais em Android, iOS e Web com Appium e Selenium.</li>
-              <li>Automação end-to-end com Java e Cucumber (BDD).</li>
-              <li>Pipelines no Jenkins com relatórios no TestMO.</li>
-              <li>Relatórios de bugs.</li>
-              <li>Revisões de código aplicando práticas de Clean Code.</li>
-            </ul>
-          </div>
+      <section class="panel" id="cursos">
+        <div class="panel-head">
+          <div class="kicker">Formação</div>
+          <h1>Cursos</h1>
         </div>
-
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="section-label">GitHub</div>
-      <h2 class="section-title">Projetos</h2>
-
-      <div class="projects-grid">
-
-        <a class="project-card" href="https://github.com/loopfagundes/serverest-api-js" target="_blank">
-          <div class="project-icon"><i class="fa fa-plug"></i></div>
-          <div class="project-title">ServeRest API — JavaScript</div>
-          <div class="project-desc">Testes completos para fluxo de compra: auth, usuários, produtos e carrinho com Cypress.</div>
-          <div class="project-stack">
-            <span class="stack-tag">JavaScript</span>
-            <span class="stack-tag">Cypress</span>
-            <span class="stack-tag">GitHub Actions</span>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/loopfagundes/db_cucumber_web" target="_blank">
-          <div class="project-icon"><i class="fa fa-flask"></i></div>
-          <div class="project-title">BDD Web — BugBank</div>
-          <div class="project-desc">Automação Selenium + Cucumber com cenários BDD para o BugBank, cobrindo fluxos críticos.</div>
-          <div class="project-stack">
-            <span class="stack-tag">Java</span>
-            <span class="stack-tag">Selenium</span>
-            <span class="stack-tag">Cucumber</span>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/loopfagundes/appium-cucumber" target="_blank">
-          <div class="project-icon"><i class="fa fa-mobile-alt"></i></div>
-          <div class="project-title">Appium + Cucumber</div>
-          <div class="project-desc">Testes mobile no Sauce Demo com Appium e Cucumber integrados - Android.</div>
-          <div class="project-stack">
-            <span class="stack-tag">Java</span>
-            <span class="stack-tag">Appium</span>
-            <span class="stack-tag">Cucumber</span>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/loopfagundes/automacao-e2e-swaglabs" target="_blank">
-          <div class="project-icon"><i class="fa fa-robot"></i></div>
-          <div class="project-title">Automação E2E — Sauce Demo</div>
-          <div class="project-desc">Automação web completa no Sauce Demo com Cypress e Cucumber.</div>
-          <div class="project-stack">
-            <span class="stack-tag">JavaScript</span>
-            <span class="stack-tag">Cypress</span>
-            <span class="stack-tag">Cucumber</span>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/loopfagundes/db_desafio_api" target="_blank">
-          <div class="project-icon"><i class="fa fa-map-marker-alt"></i></div>
-          <div class="project-title">API — Via Cep</div>
-          <div class="project-desc">Testes de API RESTful com Rest-Assured para consulta e validação do serviço ViaCEP.</div>
-          <div class="project-stack">
-            <span class="stack-tag">Java</span>
-            <span class="stack-tag">Rest-Assured</span>
-          </div>
-        </a>
-
-        <a class="project-card" href="https://github.com/loopfagundes" target="_blank">
-          <div class="project-icon"><i class="fab fa-github"></i></div>
-          <div class="project-title">Ver todos no GitHub</div>
-          <div class="project-desc">Confira todos os repositórios públicos com projetos de automação e estudo.</div>
-          <div class="project-stack">
-            <span class="stack-tag">loopfagundes</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-label">Stack</div>
-      <h2 class="section-title">Habilidades</h2>
-
-      <div class="skills-grid">
-
-        <div class="skill-group">
-          <div class="skill-group-title">Linguagens</div>
-          <div class="skill-pills">
-            <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java">Java</span>
-            <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript">JavaScript</span>
-          </div>
+        <div class="courses-list">
+          <a class="course-item" href="https://udemy-certificate.s3.amazonaws.com/image/UC-53d9d6ce-303c-4da7-b6fe-328cd25c4a88.jpg?v=1740424282000" target="_blank" rel="noopener">
+            <div class="course-icon"><i class="fa fa-certificate"></i></div>
+            <div class="course-info">
+              <div class="course-name">JavaScript do Zero ao Avançado + Projetos Reais</div>
+              <div class="course-meta">Udemy · 2025</div>
+            </div>
+            <i class="fa fa-arrow-right course-arrow"></i>
+          </a>
+          <a class="course-item" href="https://udemy-certificate.s3.amazonaws.com/image/UC-7af62994-7a9f-43fc-bd13-77738b0df12d.jpg?v=1739480052000" target="_blank" rel="noopener">
+            <div class="course-icon"><i class="fa fa-certificate"></i></div>
+            <div class="course-info">
+              <div class="course-name">Aprenda JavaScript em 7 dias + Projetos Reais</div>
+              <div class="course-meta">Udemy · 2025</div>
+            </div>
+            <i class="fa fa-arrow-right course-arrow"></i>
+          </a>
+          <a class="course-item" href="https://udemy-certificate.s3.amazonaws.com/image/UC-cb73ef2d-3372-4424-a881-a40ccb6f0402.jpg?v=1640890613000" target="_blank" rel="noopener">
+            <div class="course-icon"><i class="fa fa-certificate"></i></div>
+            <div class="course-info">
+              <div class="course-name">Automação de Testes com Selenium WebDriver e Java</div>
+              <div class="course-meta">Udemy · 2021</div>
+            </div>
+            <i class="fa fa-arrow-right course-arrow"></i>
+          </a>
+          <a class="course-item" href="https://udemy-certificate.s3.amazonaws.com/image/UC-f349be3c-63a9-4c10-90f4-409afe78e91c.jpg?v=1630009653000" target="_blank" rel="noopener">
+            <div class="course-icon"><i class="fa fa-certificate"></i></div>
+            <div class="course-info">
+              <div class="course-name">Testes funcionais com Selenium WebDriver: Do básico ao GRID</div>
+              <div class="course-meta">Udemy · 2021</div>
+            </div>
+            <i class="fa fa-arrow-right course-arrow"></i>
+          </a>
         </div>
+      </section>
 
-        <div class="skill-group">
-          <div class="skill-group-title">Automação Web &amp; Mobile</div>
-          <div class="skill-pills">
-            <span class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/selenium.svg" alt="Selenium">Selenium</span>
-            <span class="skill-pill"><img src="https://cdn.worldvectorlogo.com/logos/appium.svg" alt="Appium">Appium</span>
-            <span class="skill-pill"><img src="https://raw.githubusercontent.com/devicons/devicon/670a611ad1c3e057ee385168d65c8ab27a7e1be5/icons/cypressio/cypressio-original.svg" alt="Cypress">Cypress</span>
-            <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/cucumberio/cucumberio-icon.svg" alt="Cucumber">Cucumber</span>
-            <span class="skill-pill"><img src="https://avatars.githubusercontent.com/u/12528662?s=200&v=4" alt="TestNG">TestNG</span>
-          </div>
+      <section class="panel" id="interesses">
+        <div class="icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l2.4 4.8L20 8.6l-4 3.9.9 5.5L12 15.8 7.1 18l.9-5.5-4-3.9 5.6-.8Z"/>
+          </svg>
         </div>
+        <div class="kicker">Sobre mim</div>
+        <h1>Interesses</h1>
+        <p>
+          Gosto de enfrentar novos desafios e de trabalhar em equipe para alcançar objetivos. Tenho interesse
+          em explorar novas tecnologias e ferramentas relacionadas à área de QA, buscando sempre evoluir e
+          aprimorar minhas habilidades. Acredito que diversidade e inclusão tornam as equipes mais fortes e
+          inovadoras.
+        </p>
+      </section>
 
-        <div class="skill-group">
-          <div class="skill-group-title">Teste de API</div>
-          <div class="skill-pills">
-            <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman">Postman</span>
-            <span class="skill-pill"><img src="https://rest-assured.io/img/logo-transparent.png" alt="Rest Assured">Rest Assured</span>
-          </div>
+      <section class="panel panel--center" id="download">
+        <div class="icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 4v10"/><path d="m8 10 4 4 4-4"/><path d="M5 19h14"/>
+          </svg>
         </div>
-
-        <div class="skill-group">
-          <div class="skill-group-title">CI/CD &amp; DevOps</div>
-          <div class="skill-pills">
-            <span class="skill-pill"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/960px-Jenkins_logo.svg.png" alt="Jenkins">Jenkins</span>
-            <span class="skill-pill"><img src="https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg" alt="GitHub Actions">GitHub Actions</span>
-            <span class="skill-pill"><img src="https://hub.datree.io/img/cicd/3.png" alt="GitLab CI">GitLab CI</span>
-            <span class="skill-pill"><img src="https://cdn.worldvectorlogo.com/logos/docker-4.svg" alt="Docker">Docker</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-title">Build &amp; Gestão</div>
-          <div class="skill-pills">
-            <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/apache_maven/apache_maven-icon.svg" alt="Maven">Maven</span>
-            <span class="skill-pill"><img src="https://www.svgrepo.com/show/353831/gradle.svg" alt="Gradle">Gradle</span>
-            <span class="skill-pill"><img src="https://www.vectorlogo.zone/logos/trello/trello-icon.svg" alt="Trello">Trello</span>
-            <span class="skill-pill"><img src="https://www.svgrepo.com/show/353935/jira.svg" alt="Jira">Jira</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- COURSES -->
-    <section id="courses">
-      <div class="section-label">Formação</div>
-      <h2 class="section-title">Cursos</h2>
-
-      <div class="courses-list">
-
-        <a class="course-item" href="https://udemy-certificate.s3.amazonaws.com/image/UC-53d9d6ce-303c-4da7-b6fe-328cd25c4a88.jpg?v=1740424282000" target="_blank">
-          <div class="course-icon"><i class="fa fa-certificate"></i></div>
-          <div class="course-info">
-            <div class="course-name">JavaScript do Zero ao Avançado + Projetos Reais</div>
-            <div class="course-meta">Udemy · 2025</div>
-          </div>
-          <i class="fa fa-arrow-right course-arrow"></i>
-        </a>
-
-        <a class="course-item" href="https://udemy-certificate.s3.amazonaws.com/image/UC-7af62994-7a9f-43fc-bd13-77738b0df12d.jpg?v=1739480052000" target="_blank">
-          <div class="course-icon"><i class="fa fa-certificate"></i></div>
-          <div class="course-info">
-            <div class="course-name">Aprenda JavaScript em 7 dias + Projetos Reais</div>
-            <div class="course-meta">Udemy · 2025</div>
-          </div>
-          <i class="fa fa-arrow-right course-arrow"></i>
-        </a>
-
-        <a class="course-item" href="https://udemy-certificate.s3.amazonaws.com/image/UC-cb73ef2d-3372-4424-a881-a40ccb6f0402.jpg?v=1640890613000" target="_blank">
-          <div class="course-icon"><i class="fa fa-certificate"></i></div>
-          <div class="course-info">
-            <div class="course-name">Automação de Testes com Selenium WebDriver e Java</div>
-            <div class="course-meta">Udemy · 2021</div>
-          </div>
-          <i class="fa fa-arrow-right course-arrow"></i>
-        </a>
-
-        <a class="course-item" href="https://udemy-certificate.s3.amazonaws.com/image/UC-f349be3c-63a9-4c10-90f4-409afe78e91c.jpg?v=1630009653000" target="_blank">
-          <div class="course-icon"><i class="fa fa-certificate"></i></div>
-          <div class="course-info">
-            <div class="course-name">Testes funcionais com Selenium WebDriver: Do básico ao GRID</div>
-            <div class="course-meta">Udemy · 2021</div>
-          </div>
-          <i class="fa fa-arrow-right course-arrow"></i>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- INTERESTS -->
-    <section id="interests">
-      <div class="section-label">Sobre mim</div>
-      <h2 class="section-title">Interesses</h2>
-      <p class="interests-text">
-        Gosto de enfrentar novos desafios e de trabalhar em equipe para alcançar objetivos. Tenho interesse
-        em explorar novas tecnologias e ferramentas relacionadas à área de QA, buscando sempre evoluir e
-        aprimorar minhas habilidades. Acredito que diversidade e inclusão tornam as equipes mais fortes e
-        inovadoras.
-      </p>
-    </section>
-
-    <!-- DOWNLOAD -->
-    <section id="download">
-      <div class="section-label">Currículo</div>
-      <h2 class="section-title">Download</h2>
-      <div class="download-card">
-        <div class="download-icon"><i class="fa-solid fa-file"></i></div>
-        <h3>Currículo completo</h3>
+        <div class="kicker">Currículo</div>
+        <h1>Download</h1>
         <p>Versão atualizada em PDF com toda a experiência, habilidades e projetos.</p>
-        <a class="download-btn" href="https://drive.google.com/file/d/1h_lOXQ8ivY7OzkSRaL4tvPjTa73UQ1FB/view" target="_blank">
+        <a class="download-btn" href="https://drive.google.com/file/d/1h_lOXQ8ivY7OzkSRaL4tvPjTa73UQ1FB/view" target="_blank" rel="noopener">
           <i class="fa fa-download"></i> Baixar PDF
         </a>
-      </div>
-    </section>
-
-  </main>
+      </section>
+    </main>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
